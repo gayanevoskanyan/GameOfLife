@@ -1,10 +1,20 @@
+
+let Grass = require("./Grass");
+let GrassEater = require("./GrassEater");
+let Gazanik = require("./Gazanik");
+let Mard = require("./Mard");
+let Jur = require("./Jur");
+let Dzuk = require("./Dzuk");
+
 let grassArr = [];
 let grassEaterArr = [];
 let gazanikArr = []; 
 let mardArr = [];
 let jurArr = [];
 let dzukArr = [];
+
 let matrix = [];
+
 function generator(n, gr, grEat, gazanik, mard, jur, dzuk) {
   for (let x = 0; x < n; x++) {
     matrix[x] = [];
@@ -57,6 +67,7 @@ function generator(n, gr, grEat, gazanik, mard, jur, dzuk) {
 }
 generator(60, 30, 40, 60, 20, 30, 40);
 let side = 10;
+
 function setup() {
   createCanvas(matrix[0].length * side + 1, matrix.length * side + 1);
   background("grey");
@@ -90,6 +101,7 @@ function setup() {
     }
   }
 }
+
 function draw() {
   for (let x = 0; x < matrix.length; x++) {
     for (let y = 0; y < matrix[x].length; y++) {
